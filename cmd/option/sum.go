@@ -2,15 +2,16 @@ package option
 
 import (
 	"fmt"
-	"github.com/mpppk/cli-template/util"
+
+	"github.com/yiranzai/github-starred/util"
 
 	"github.com/spf13/viper"
 )
 
 // SumCmdConfig is config for sum command
 type SumCmdConfig struct {
-	Norm bool
-	Out  string
+	Norm    bool
+	Out     string
 	Numbers []int
 }
 

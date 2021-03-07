@@ -3,8 +3,8 @@ package repoimpl
 import (
 	"log"
 
-	"github.com/mpppk/cli-template/domain/model"
-	"github.com/mpppk/cli-template/domain/repository"
+	"github.com/yiranzai/github-starred/domain/model"
+	"github.com/yiranzai/github-starred/domain/repository"
 )
 
 // MemorySumHistory represents on memory repository of sum history

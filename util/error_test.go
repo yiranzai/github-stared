@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/mpppk/cli-template/util"
+	"github.com/yiranzai/github-starred/util"
 )
 
 func TestPrettyPrintError(t *testing.T) {

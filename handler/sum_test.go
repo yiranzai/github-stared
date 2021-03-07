@@ -7,12 +7,12 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/mpppk/cli-template/infra"
-	"github.com/mpppk/cli-template/registry"
+	"github.com/yiranzai/github-starred/infra"
+	"github.com/yiranzai/github-starred/registry"
 
 	"github.com/labstack/echo"
 
-	"github.com/mpppk/cli-template/handler"
+	"github.com/yiranzai/github-starred/handler"
 )
 
 func TestSum(t *testing.T) {

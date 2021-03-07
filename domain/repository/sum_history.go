@@ -1,6 +1,6 @@
 package repository
 
-import "github.com/mpppk/cli-template/domain/model"
+import "github.com/yiranzai/github-starred/domain/model"
 
 // SumHistory represents repository to manage history of sum calculation
 type SumHistory interface {

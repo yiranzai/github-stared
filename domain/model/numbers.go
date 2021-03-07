@@ -1,8 +1,9 @@
 package model
 
 import (
-	"github.com/mpppk/cli-template/util"
 	"math"
+
+	"github.com/yiranzai/github-starred/util"
 )
 
 // Numbers represents numbers

@@ -1,6 +1,6 @@
 package main
 
-import "github.com/mpppk/cli-template/cmd"
+import "github.com/yiranzai/github-starred/cmd"
 
 func main() {
 	cmd.Execute()

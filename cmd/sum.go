@@ -5,10 +5,10 @@ import (
 	"log"
 	"strconv"
 
-	"github.com/mpppk/cli-template/registry"
+	"github.com/yiranzai/github-starred/registry"
 
-	"github.com/mpppk/cli-template/cmd/option"
 	"github.com/spf13/afero"
+	"github.com/yiranzai/github-starred/cmd/option"
 
 	"github.com/spf13/cobra"
 )

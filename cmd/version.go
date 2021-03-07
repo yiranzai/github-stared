@@ -1,9 +1,9 @@
 package cmd
 
 import (
-	"github.com/mpppk/cli-template/util"
 	"github.com/spf13/afero"
 	"github.com/spf13/cobra"
+	"github.com/yiranzai/github-starred/util"
 )
 
 func newVersionCmd(fs afero.Fs) (*cobra.Command, error) {

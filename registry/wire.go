@@ -1,18 +1,18 @@
-//+build wireinject
+//+build wireinject linux darwin windows
 
 package registry
 
 //go:generate wire
 
 import (
+	"github.com/google/wire"
 	"github.com/labstack/echo"
-	"github.com/mpppk/cli-template/domain/model"
-	"github.com/mpppk/cli-template/handler"
-	"github.com/mpppk/cli-template/infra"
-	"github.com/mpppk/cli-template/infra/repoimpl"
-	"github.com/mpppk/cli-template/usecase"
+	"github.com/yiranzai/github-starred/domain/model"
+	"github.com/yiranzai/github-starred/handler"
+	"github.com/yiranzai/github-starred/infra"
+	"github.com/yiranzai/github-starred/infra/repoimpl"
+	"github.com/yiranzai/github-starred/usecase"
 )
-import "github.com/google/wire"
 
 // InitializeHandler initialize handlers with memorySumHistoryRepository
 func InitializeHandler(v []*model.SumHistory) *handler.Handlers {

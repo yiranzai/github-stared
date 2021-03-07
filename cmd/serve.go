@@ -1,10 +1,10 @@
 package cmd
 
 import (
-	"github.com/mpppk/cli-template/cmd/option"
-	"github.com/mpppk/cli-template/registry"
 	"github.com/spf13/afero"
 	"github.com/spf13/viper"
+	"github.com/yiranzai/github-starred/cmd/option"
+	"github.com/yiranzai/github-starred/registry"
 
 	"github.com/spf13/cobra"
 )

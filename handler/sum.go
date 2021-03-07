@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo"
-	"github.com/mpppk/cli-template/usecase"
+	"github.com/yiranzai/github-starred/usecase"
 )
 
 // Handlers represent handlers of echo server
@@ -13,8 +13,8 @@ type Handlers struct {
 }
 
 type sumRequest struct {
-	A    int  `query:"a" Validate:"required"`
-	B    int  `query:"b" Validate:"required"`
+	A    int  `query:"a"    Validate:"required"`
+	B    int  `query:"b"    Validate:"required"`
 	Norm bool `query:"norm"`
 }
 

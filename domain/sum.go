@@ -1,8 +1,8 @@
 package domain
 
 import (
-	"github.com/mpppk/cli-template/domain/model"
-	"github.com/mpppk/cli-template/util"
+	"github.com/yiranzai/github-starred/domain/model"
+	"github.com/yiranzai/github-starred/util"
 )
 
 // NewNumbersFromStringSlice create new Numbers with numbers from string slice
@@ -13,5 +13,3 @@ func NewNumbersFromStringSlice(strNumbers []string) (model.Numbers, error) {
 	}
 	return model.NewNumbers(rawNumbers), nil
 }
-
-

@@ -3,7 +3,7 @@ package infra
 import (
 	"fmt"
 
-	"github.com/mpppk/cli-template/handler"
+	"github.com/yiranzai/github-starred/handler"
 
 	"github.com/go-playground/validator/v10"
 	"github.com/labstack/echo"
