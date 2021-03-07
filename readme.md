@@ -8,19 +8,6 @@
 
 _golang project template for building CLI_
 
-## Setup
-
-### Setup by Command
-
-1. `git clone https://github.com/yiranzai/github-starred your_awesome_tool`
-1. Replace all strings `cli-template` in this repository to `your_awesome_tool`
-
-### Setup on GitHub
-
-Click "Use this template" button on GitHub project page.
-
-![](https://github.com/yiranzai/github-starred/wiki/images/template-button.png)
-
 ## Project structure
 
 ### Application layers
@@ -88,9 +75,9 @@ For more details, see [my article (Japanese)](https://qiita.com/mpppk/items/ab32
 ## Build & Run Docker image
 
 ```bash
-$ docker build -t cli-template .
+$ docker build -t github_starred .
 ...
-$ docker run cli-template sum 1 2
+$ docker run github_starred sum 1 2
 3
 ```
 
@@ -117,7 +104,7 @@ This template includes [renovate.json](https://github.com/yiranzai/github-starre
 
 ---
 
-# cli-template
+# github_starred
 
 ## Installation
 

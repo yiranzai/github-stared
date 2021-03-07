@@ -9,8 +9,8 @@ import (
 func newSelfUpdateCmd(fs afero.Fs) (*cobra.Command, error) {
 	cmd := &cobra.Command{
 		Use:   "selfupdate",
-		Short: "Update cli-template",
-		//Long: `Update cli-template`,
+		Short: "Update github_starred",
+		//Long: `Update github_starred`,
 		Run: func(cmd *cobra.Command, args []string) {
 			updated, err := util.Do()
 			if err != nil {

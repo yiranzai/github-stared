@@ -2,7 +2,7 @@ version: "{build}"
 
 platform: x64
 
-clone_folder: c:\gopath\src\github.com\mpppk\cli-template
+clone_folder: c:\gopath\src\github.com\yiranzai\github_starred
 
 environment:
   GOPATH: c:\gopath
@@ -23,4 +23,3 @@ install:
 build_script:
   - go test -v ./...
   - go build
-

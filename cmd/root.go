@@ -29,8 +29,8 @@ func NewRootCmd(fs afero.Fs) (*cobra.Command, error) {
 	}
 
 	cmd := &cobra.Command{
-		Use:               "cli-template",
-		Short:             "cli-template",
+		Use:               "github_starred",
+		Short:             "github_starred",
 		SilenceErrors:     true,
 		SilenceUsage:      true,
 		PersistentPreRunE: pPreRunE,
@@ -66,7 +66,7 @@ func registerFlags(cmd *cobra.Command) error {
 			BaseFlag: &option.BaseFlag{
 				Name:         "config",
 				IsPersistent: true,
-				Usage:        "config file (default is $HOME/.cli-template.yaml)",
+				Usage:        "config file (default is $HOME/.github_starred.yaml)",
 			}},
 		&option.BoolFlag{
 			BaseFlag: &option.BaseFlag{
@@ -109,9 +109,9 @@ func initConfig() {
 			os.Exit(1)
 		}
 
-		// Search config in home directory with name ".cli-template" (without extension).
+		// Search config in home directory with name ".github_starred" (without extension).
 		viper.AddConfigPath(home)
-		viper.SetConfigName(".cli-template")
+		viper.SetConfigName(".github_starred")
 	}
 
 	viper.AutomaticEnv() // read in environment variables that match
