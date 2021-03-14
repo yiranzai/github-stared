@@ -4,13 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/yiranzai/github-starred/util"
-
-	"github.com/yiranzai/github-starred/cmd/option"
-
 	"github.com/spf13/afero"
 
-	"github.com/mitchellh/go-homedir"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -19,28 +14,15 @@ var cfgFile string
 
 // NewRootCmd generate root cmd
 func NewRootCmd(fs afero.Fs) (*cobra.Command, error) {
-	pPreRunE := func(cmd *cobra.Command, args []string) error {
-		conf, err := option.NewRootCmdConfigFromViper()
-		if err != nil {
-			return err
-		}
-		util.InitializeLog(conf.Verbose)
-		return nil
-	}
 
 	cmd := &cobra.Command{
-		Use:               "github_starred",
-		Short:             "github_starred",
-		SilenceErrors:     true,
-		SilenceUsage:      true,
-		PersistentPreRunE: pPreRunE,
+		Use:           "github_starred",
+		Short:         "github_starred",
+		SilenceErrors: true,
+		SilenceUsage:  true,
 	}
 
 	if err := registerSubCommands(fs, cmd); err != nil {
-		return nil, err
-	}
-
-	if err := registerFlags(cmd); err != nil {
 		return nil, err
 	}
 
@@ -60,25 +42,6 @@ func registerSubCommands(fs afero.Fs, cmd *cobra.Command) error {
 	return nil
 }
 
-func registerFlags(cmd *cobra.Command) error {
-	flags := []option.Flag{
-		&option.StringFlag{
-			BaseFlag: &option.BaseFlag{
-				Name:         "config",
-				IsPersistent: true,
-				Usage:        "config file (default is $HOME/.github_starred.yaml)",
-			}},
-		&option.BoolFlag{
-			BaseFlag: &option.BaseFlag{
-				Name:         "verbose",
-				Shorthand:    "v",
-				IsPersistent: true,
-				Usage:        "Show more logs",
-			}},
-	}
-	return option.RegisterFlags(cmd, flags)
-}
-
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by main.main(). It only needs to happen once to the rootCmd.
 func Execute() {
@@ -87,7 +50,7 @@ func Execute() {
 		panic(err)
 	}
 	if err := rootCmd.Execute(); err != nil {
-		fmt.Print(util.PrettyPrintError(err))
+		fmt.Print(err.Error())
 		os.Exit(1)
 	}
 }
@@ -98,21 +61,6 @@ func init() {
 
 // initConfig reads in config file and ENV variables if set.
 func initConfig() {
-	if cfgFile != "" {
-		// Use config file from the flag.
-		viper.SetConfigFile(cfgFile)
-	} else {
-		// Find home directory.
-		home, err := homedir.Dir()
-		if err != nil {
-			fmt.Println(err)
-			os.Exit(1)
-		}
-
-		// Search config in home directory with name ".github_starred" (without extension).
-		viper.AddConfigPath(home)
-		viper.SetConfigName(".github_starred")
-	}
 
 	viper.AutomaticEnv() // read in environment variables that match
 
