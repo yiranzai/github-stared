@@ -16,8 +16,8 @@ var cfgFile string
 func NewRootCmd(fs afero.Fs) (*cobra.Command, error) {
 
 	cmd := &cobra.Command{
-		Use:           "github_starred",
-		Short:         "github_starred",
+		Use:           "github-starred",
+		Short:         "github-starred",
 		SilenceErrors: true,
 		SilenceUsage:  true,
 	}

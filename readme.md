@@ -1,4 +1,4 @@
-# github_starred
+# github-starred
 
 [![codecov](https://codecov.io/gh/yiranzai/github-starred/branch/master/graph/badge.svg)](https://codecov.io/gh/yiranzai/github-starred)
 [![Go Report Card](https://goreportcard.com/badge/github.com/yiranzai/github-starred)](https://goreportcard.com/report/github.com/yiranzai/github-starred)
@@ -26,10 +26,10 @@ Download from [GitHub Releases](https://github.com/yiranzai/github-starred/relea
 Print Github Starred List
 
 Usage:
-  github_starred list [flags]
+  github-starred list [flags]
 
 Examples:
-github_starred list
+github-starred list
 
 Flags:
   -a, --all               all body, no filters, format json

@@ -2,7 +2,7 @@ version: "{build}"
 
 platform: x64
 
-clone_folder: c:\gopath\src\github.com\yiranzai\github_starred
+clone_folder: c:\gopath\src\github.com\yiranzai\github-starred
 
 environment:
   GOPATH: c:\gopath

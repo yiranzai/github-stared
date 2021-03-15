@@ -13,7 +13,7 @@ func newListCmd(fs afero.Fs) (*cobra.Command, error) {
 		Use:     "list",
 		Short:   "Print Github Starred List",
 		Long:    ``,
-		Example: "github_starred list",
+		Example: "github-starred list",
 		Args:    cobra.MaximumNArgs(0),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			conf, err := option.NewListCmdConfigFromViper()
