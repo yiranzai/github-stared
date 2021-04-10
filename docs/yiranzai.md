@@ -1,3 +1,9 @@
+<!--ts-->
+   * [yiranzai github starred list](./docs/yiranzai.md#yiranzai-github-starred-list)
+
+<!-- Added by: runner, at: Sat Apr 10 09:42:58 UTC 2021 -->
+
+<!--te-->
 # yiranzai github starred list
 
 - [goreleaser/goreleaser](https://github.com/goreleaser/goreleaser): Deliver Go binaries as fast and easily as possible

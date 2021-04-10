@@ -1,3 +1,14 @@
+<!--ts-->
+   * [github-starred](./readme.md#github-starred)
+      * [Installation](./readme.md#installation)
+         * [MacOS](./readme.md#macos)
+         * [Linux](./readme.md#linux)
+         * [Windows](./readme.md#windows)
+      * [Usage](./readme.md#usage)
+
+<!-- Added by: runner, at: Sat Apr 10 09:42:57 UTC 2021 -->
+
+<!--te-->
 # github-starred
 
 [![codecov](https://codecov.io/gh/yiranzai/github-starred/branch/master/graph/badge.svg)](https://codecov.io/gh/yiranzai/github-starred)
